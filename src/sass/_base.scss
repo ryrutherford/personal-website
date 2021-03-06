@@ -1,19 +1,21 @@
 // COLOR VARIABLES
-$color-primary: #8821B0;
-$color-primary-light: #BE65E2;
-$color-primary-dark: #5c1778;
+$color-primary: #301A4B;
+$color-primary-light: #DD92A0;
+$color-primary-dark: #6D2230;
 
+$color-secondary-dark: #3F6C51;
 $color-secondary: #189471;
 
 $color-white: #ffffff;
 
 $color-grey-light-1: #f9f7f6;
 $color-grey-light-2: #aaa;
-
-$color-grey-dark: #B3A2B2;
+$color-grey-light-3: #B3A2B2;
 
 $color-error: #ff0033;
 $color-success: #10ac24;
+
+$large-font-size: 2rem;
 
 *,
 *::before,
@@ -102,12 +104,14 @@ html {
 
 body {
     font-family: 'ProximaNovaReg';
-    color: $color-grey-dark;
+    color: $color-primary;
     line-height: 1.6;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .link {
