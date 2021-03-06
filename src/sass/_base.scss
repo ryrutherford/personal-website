@@ -1,0 +1,124 @@
+// COLOR VARIABLES
+$color-primary: #8821B0;
+$color-primary-light: #BE65E2;
+$color-primary-dark: #5c1778;
+
+$color-secondary: #189471;
+
+$color-white: #ffffff;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark: #B3A2B2;
+
+$color-error: #ff0033;
+$color-success: #10ac24;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+//MEDIA QUERY MANAGER
+//0-600px PHONE
+//600-900px Tablet portrait
+//900-1200px Tablet landscape
+//1200-1800 normal styles
+//1800px+ big desktop
+
+//ORDER: Base + typography > general layout + grid > page layout > components
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-small {
+    @media (max-width: 18.75em) { //600px
+      @content
+    };
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { //600px
+      @content
+    };
+  }
+  @if $breakpoint == tab-port { //931px
+    @media (max-width: 58.1875em){
+      @content
+    };
+  }
+  @if $breakpoint == tab-port-min { //933px
+      @media (min-width: 58.3125em){
+        @content
+      };
+    }
+  @if $breakpoint == tab-land { //1200px
+    @media (max-width: 75em){
+      @content
+    };
+  }
+  @if $breakpoint == big-desktop { //1800px
+    @media (min-width: 112.5em){
+      @content
+    };
+  }
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+    min-height: 100%;
+
+    @include respond(phone){
+      font-size: 50%;
+    }
+}
+
+@font-face {
+    font-family: 'ProximaNovaReg';
+    src: url(./sass/fonts/Proxima-Nova-Reg.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegIt';
+    src: url(./sass/fonts/Proxima-Nova-Reg-It.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url(./sass/fonts/Proxima-Nova-Light.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url(./sass/fonts/Proxima-Nova-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaBlack';
+    src: url(./sass/fonts/Proxima-Nova-Black.otf) format('opentype');
+}
+
+body {
+    font-family: 'ProximaNovaReg';
+    color: $color-grey-dark;
+    line-height: 1.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+.link {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: currentColor;
+    }
+}
+
+.white-space {
+    white-space: pre-wrap;
+}
