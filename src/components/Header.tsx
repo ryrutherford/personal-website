@@ -11,7 +11,7 @@ const Header = () => {
                     <p className="nav-separator">/</p>
                     <Link to="/" className="nav-link link">Projects</Link>
                     <p className="nav-separator">/</p>
-                    <Link to="/" className="nav-link link">Resume</Link>
+                    <Link to="/resume" className="nav-link link">Resume</Link>
                     <p className="nav-separator">/</p>
                     <Link to="/" className="nav-link link">Miscellaneous</Link>
                 </div>

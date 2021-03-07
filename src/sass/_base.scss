@@ -17,6 +17,7 @@ $color-success: #10ac24;
 
 $large-font-size: 2rem;
 $xlarge-font-size: 3rem;
+$xxlarge-font-size: 12rem;
 
 *,
 *::before,
@@ -126,4 +127,32 @@ body {
 
 .white-space {
     white-space: pre-wrap;
+}
+
+.bgcolor-primary {
+  background-color: $color-primary;
+}
+
+.bgcolor-secondary-dark {
+  background-color: $color-secondary-dark;
+}
+
+.color-white {
+  color: $color-white;
+}
+
+.title {
+  font-size: $xxlarge-font-size;
+}
+
+.svg-box {
+  position: relative;
+  height: 50rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
