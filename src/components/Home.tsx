@@ -1,16 +1,14 @@
 import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
 
 const Home = () => {
     return(
-        <>
-            <Header/>
-            <div>
-                Body Here
+        <section className="home">
+            <div className="home-box">
+                <p className="home-intro">
+                    Welcome to my website!
+                </p>
             </div>
-            <Footer/>
-        </>
+        </section>
     );
 }
 
