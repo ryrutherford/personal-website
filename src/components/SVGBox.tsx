@@ -1,14 +1,15 @@
 import React from "react";
 import Typical from "react-typical";
 
-interface svgProps {
+interface SVGProps {
     steps: any[],
-    svgStyle: string
+    svgStyle: string,
+    bgColorClass: string,
 }
 
-const SVGBox = ({steps, svgStyle}: svgProps) => {
+const SVGBox = ({steps, svgStyle, bgColorClass}: SVGProps) => {
     return (
-        <div className={`svg-box bgcolor-primary ${svgStyle}`}>
+        <div className={`svg-box ${bgColorClass} ${svgStyle}`}>
             <p className="title color-white"><Typical loop={Infinity} wrapper="b" steps={steps}/></p>
         </div>
     );

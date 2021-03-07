@@ -5,6 +5,12 @@ $color-primary-dark: #6D2230;
 
 $color-secondary-dark: #3F6C51;
 $color-secondary: #189471;
+$color-secondary-light: #D6F8EE;
+
+$color-tertiary: #E7F2F9;
+
+$color-grey-dark-1: #302c29;
+$color-grey-dark-2: #3d3429;
 
 $color-white: #ffffff;
 
@@ -15,6 +21,8 @@ $color-grey-light-3: #B3A2B2;
 $color-error: #ff0033;
 $color-success: #10ac24;
 
+$small-font-size: 1.3rem;
+$medium-font-size: 1.5rem;
 $large-font-size: 2rem;
 $xlarge-font-size: 3rem;
 $xxlarge-font-size: 12rem;
@@ -135,6 +143,22 @@ body {
 
 .bgcolor-secondary-dark {
   background-color: $color-secondary-dark;
+}
+
+.bgcolor-secondary {
+  background-color: $color-secondary;
+}
+
+.bgcolor-secondary-light {
+  background-color: $color-secondary-light;
+}
+
+.bgcolor-tertiary {
+  background-color: $color-tertiary;
+}
+
+.bgcolor-grey-light-1 {
+  background-color: $color-grey-light-1;
 }
 
 .color-white {
