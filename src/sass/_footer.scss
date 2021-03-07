@@ -1,0 +1,46 @@
+.footer {
+    text-align: center;
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    right: 0;
+
+    &-flex {
+        width: 25vw;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    &-icon {
+        fill: $color-primary;
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-top: 2rem;
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &-img {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 8%;
+        margin-top: 2rem;
+
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    &-copy {
+        color: $color-primary;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
