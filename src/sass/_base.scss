@@ -8,6 +8,7 @@ $color-secondary: #189471;
 $color-secondary-light: #D6F8EE;
 
 $color-tertiary: #E7F2F9;
+$color-tertiary-comp: #e7e9f9;
 
 $color-grey-dark-1: #302c29;
 $color-grey-dark-2: #3d3429;
@@ -81,7 +82,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
     min-height: 100%;
-
+    
     @include respond(phone){
       font-size: 50%;
     }
@@ -122,61 +123,4 @@ body {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-}
-
-.link {
-    &,
-    &:link,
-    &:visited {
-        text-decoration: none;
-        color: currentColor;
-    }
-}
-
-.white-space {
-    white-space: pre-wrap;
-}
-
-.bgcolor-primary {
-  background-color: $color-primary;
-}
-
-.bgcolor-secondary-dark {
-  background-color: $color-secondary-dark;
-}
-
-.bgcolor-secondary {
-  background-color: $color-secondary;
-}
-
-.bgcolor-secondary-light {
-  background-color: $color-secondary-light;
-}
-
-.bgcolor-tertiary {
-  background-color: $color-tertiary;
-}
-
-.bgcolor-grey-light-1 {
-  background-color: $color-grey-light-1;
-}
-
-.color-white {
-  color: $color-white;
-}
-
-.title {
-  font-size: $xxlarge-font-size;
-}
-
-.svg-box {
-  position: relative;
-  height: 50rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 1rem;
-  border-radius: .5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

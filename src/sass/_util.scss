@@ -1,0 +1,72 @@
+.link {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: currentColor;
+    }
+}
+
+.white-space {
+    white-space: pre-wrap;
+}
+
+.bgcolor-primary {
+  background-color: $color-primary;
+}
+
+.bgcolor-secondary-dark {
+  background-color: $color-secondary-dark;
+}
+
+.bgcolor-secondary {
+  background-color: $color-secondary;
+}
+
+.bgcolor-secondary-light {
+  background-color: $color-secondary-light;
+}
+
+.bgcolor-tertiary {
+  background-color: $color-tertiary;
+}
+
+.bgcolor-tertiary-comp {
+  background-color: $color-tertiary-comp;
+}
+
+.bgimage-color-tertiary-gradient {
+  background-image: linear-gradient(to right bottom, $color-tertiary, $color-tertiary-comp);
+}
+
+.bgcolor-grey-light-1 {
+  background-color: $color-grey-light-1;
+}
+
+.bgcolor-grey-light-2 {
+  background-color: $color-grey-light-2;
+}
+
+.bgcolor-grey-light-3 {
+  background-color: $color-grey-light-3;
+}
+
+.color-white {
+  color: $color-white;
+}
+
+.title {
+  font-size: $xxlarge-font-size;
+}
+
+.svg-box {
+  position: relative;
+  height: 50rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,7 +1,7 @@
 import NuanceLogo from "../images/nuance-logo.png";
-import IRCCLogo from "../images/ircc-logo.png";
-import McGillLogo from "../images/mcgill-logo.png";
-import UniMelbLogo from "../images/unimelb-logo.png";
+import IRCCLogo from "../images/ircc-logo2.png";
+import McGillLogo from "../images/mcgill-logo2.png";
+import UniMelbLogo from "../images/unimelb-logo2.png";
 import SuitsULogo from "../images/suitsu-logo.png";
 
 export interface ResumeItem {

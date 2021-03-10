@@ -1,8 +1,26 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 
+const getSelectedPath = (pathname: string) => {
+    if(pathname === "/about"){
+        return 0;
+    }
+    else if(pathname === "/projects"){
+        return 1;
+    }
+    else if(window.location.pathname === "/resume"){
+        return 2;
+    }
+    else if(window.location.pathname === "/misc"){
+        return 3;
+    }
+    else{
+        return -1;
+    }
+}
+
 const Header = () => {
-    const [selected, setSelected] = useState(-1);
+    const [selected, setSelected] = useState(getSelectedPath(window.location.pathname));
 
     return(
         <header>
