@@ -1,0 +1,118 @@
+.resume {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &-item {
+
+        &-box {
+            position: relative;
+            height: 30rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-radius: .5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            perspective: 150rem;
+            -moz-perspective: 150rem;
+            color: $color-grey-dark-1;
+            //transition: all .8s;
+
+            &-side{
+                width: 100%;
+                height: 100%;
+                border-radius: .5rem;
+                backface-visibility: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: all 1s ease;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                &--back{
+                    transform: rotateY(180deg);
+                    font-size: $small-font-size;
+                    //color: $color-grey-light-1
+                }
+
+                &--front {
+                    text-align: center;
+                }
+            }
+
+            &:hover &-side--front{
+                transform: rotateY(180deg);
+            }
+
+            &:hover &-side--back{
+                transform: rotateY(0);
+                box-shadow: .5rem .5rem $color-tertiary;
+            }
+        }
+
+        &-title {
+            font-size: $large-font-size;
+            grid-column: 1 / -1;
+        }
+
+        &-main {
+            font-size: $large-font-size;
+            font-family: "ProximaNovaBold";
+        }
+
+        &-sub {
+            font-size: $small-font-size;
+        }
+
+        &-date {
+            font-family: "ProximaNovaRegIt";
+        }
+
+        &-separator {
+            grid-column: 1 / -1;
+            height: .5rem;
+            background-image: linear-gradient(to right, $color-tertiary, $color-tertiary-comp);
+            border-radius: 5%;
+        }
+
+        &-full {
+            perspective: none;
+            grid-column: 1 / -1;
+        }
+
+        &-image {
+            width: auto;
+            height: auto;
+            margin-bottom: 1rem;
+            max-width: 18rem;
+            max-height: 7rem;
+            object-fit: scale-down;
+        }
+
+        &-list {
+            margin: auto 2rem;
+            width: 90%;
+
+            &-item {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+
+                &::marker {
+                    content: "\021A0";
+                }
+
+                & span {
+                    position: relative;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+}

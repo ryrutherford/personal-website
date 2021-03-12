@@ -5,6 +5,13 @@ $color-primary-dark: #6D2230;
 
 $color-secondary-dark: #3F6C51;
 $color-secondary: #189471;
+$color-secondary-light: #D6F8EE;
+
+$color-tertiary: #E7F2F9;
+$color-tertiary-comp: #e7e9f9;
+
+$color-grey-dark-1: #302c29;
+$color-grey-dark-2: #3d3429;
 
 $color-white: #ffffff;
 
@@ -15,8 +22,11 @@ $color-grey-light-3: #B3A2B2;
 $color-error: #ff0033;
 $color-success: #10ac24;
 
+$small-font-size: 1.3rem;
+$medium-font-size: 1.5rem;
 $large-font-size: 2rem;
 $xlarge-font-size: 3rem;
+$xxlarge-font-size: 12rem;
 
 *,
 *::before,
@@ -72,7 +82,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
     min-height: 100%;
-
+    
     @include respond(phone){
       font-size: 50%;
     }
@@ -113,17 +123,4 @@ body {
     position: relative;
     padding-left: 1rem;
     padding-right: 1rem;
-}
-
-.link {
-    &,
-    &:link,
-    &:visited {
-        text-decoration: none;
-        color: currentColor;
-    }
-}
-
-.white-space {
-    white-space: pre-wrap;
 }
