@@ -26,7 +26,7 @@ const ResumeValue = ({resumeItem, gridClass}: ResumeValueProps) => {
                                     {experience.description && experience.description.map((item, index) => {
                                         return(
                                             <li className="resume-item-list-item" key={index}>
-                                                {item}
+                                                <span>{item}</span>
                                             </li>
                                         );
                                     })}

@@ -33,7 +33,8 @@ const educationValues: ResumeItem[] = [{
             company: "McGill University",
             date: "September 2017 - Present",
             logo: McGillLogo,
-            description: ["temp"]
+            description: ["Commerce 1955 Scholarship for outstanding achievement and extracurricular involvement",
+                "Dean’s Honour List for being part of the top 10% of students in the faculty", "CGPA: 3.97/4.0"]
         }
     }, {
         experience: {
@@ -41,7 +42,7 @@ const educationValues: ResumeItem[] = [{
             company: "University of Melbourne",
             date: "March 2020 - July 2020",
             logo: UniMelbLogo,
-            description: ["temp"]
+            description: ["Melbourne University Weightlifting & Powerlifting Club", "Melbourne University Soccer Club", "H1 WAM"]
         }
     }
 ]
@@ -52,7 +53,8 @@ const workExpValues: ResumeItem[] = [{
             company: "Nuance Communications",
             date: "January 2021 - Present",
             logo: NuanceLogo,
-            description: ["temp"]
+            description: ["Developed numerous features for an internal application used by Developers, QA Analysts and Speech Scientists to manage, monitor, and update their Interactive Voice Response and Virtual Assistant applications",
+            "Worked on numerous speech enabled applications for customers like UPS and Wells Fargo"]
         }
     }, {
         experience: {
@@ -74,7 +76,11 @@ const volunteerValues: ResumeItem[] = [{
             company: "Suits U Montreal",
             date: "September 2017 - Present",
             logo: SuitsULogo,
-            description: ["temp"]
+            description: ["Planned, promoted, and executed multiple suit sales which raised over $3000 for charity and provided students with easy access to affordable business wear",
+                "Directed club operations including recruitment, financial planning, client outreach, and digital transformation during COVID",
+                "Managed a team of 3 people to categorize, itemize, and organize inventory to facilitate the tracking of suit sales",
+                `Developed the Suits U website which allows students to browse our inventory and order items for pickup`
+                ]
         }
     }
 ]
