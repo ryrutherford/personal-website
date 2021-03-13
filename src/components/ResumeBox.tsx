@@ -12,7 +12,7 @@ const ResumeBox = ({title, values}: ResumeBoxInfo) => {
             {values.map((value, index) => {
                 if(index === valuesLength - 1 && index % 2 === 0){
                     return (
-                        <ResumeValue resumeItem={value} gridClass="resume-item-full" key={index}/>
+                        <ResumeValue resumeItem={value} gridClass="grid-full" key={index}/>
                     );
                 }
                 else{

@@ -27,7 +27,7 @@ const Header = () => {
             <nav className="nav">
                 <Link to="/" className="nav-logo link" onClick={() => setSelected(-1)}>[ Ry Rutherford ]</Link>
                 <div className="nav-list">
-                    <Link to="/" className={selected === 0 ? "nav-link nav-link-selected link" : "nav-link link"} onClick={() => setSelected(0)}>About</Link>
+                    <Link to="/about" className={selected === 0 ? "nav-link nav-link-selected link" : "nav-link link"} onClick={() => setSelected(0)}>About</Link>
                     <p className="nav-separator">/</p>
                     <Link to="/" className={selected === 1 ? "nav-link nav-link-selected link" : "nav-link link"} onClick={() => setSelected(1)}>Projects</Link>
                     <p className="nav-separator">/</p>
