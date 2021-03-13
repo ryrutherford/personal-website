@@ -90,6 +90,48 @@
             object-fit: scale-down;
         }
 
+        &-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        &-tool {
+            width: 10rem;
+            height: 8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            background-color: $color-tertiary;
+            border-radius: .5rem;
+            transition: all .5s;
+
+            &:hover{
+                box-shadow: .5rem .5rem .5rem $color-tertiary-comp;
+            }
+
+            &:hover &-image{
+                transform: scale(1.15);
+            }
+            
+            &-image {
+                transition: all .5s;
+                width: auto;
+                height: auto;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                //border-radius: 50%;
+                max-height: 4rem;
+                max-width: 4rem;
+                object-fit: contain;
+            }
+        }
+
         &-list {
             margin: auto 2rem;
             width: 90%;

@@ -9,7 +9,14 @@ const ResumeBox = ({title, values}: ResumeBoxInfo) => {
         <>
             <span className="resume-item-title">{title}</span>
             <span className="resume-item-separator"/>
-            {values.map((value, index) => {
+            {values[0].tool ? 
+                <div className="grid-full resume-item-flex">
+                    {values.map((value, index) => {
+                        return <ResumeValue resumeItem={value} key={index}/>;
+                    })}
+                </div> 
+            :
+            values.map((value, index) => {
                 if(index === valuesLength - 1 && index % 2 === 0){
                     return (
                         <ResumeValue resumeItem={value} gridClass="grid-full" key={index}/>

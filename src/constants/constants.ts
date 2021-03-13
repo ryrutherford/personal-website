@@ -3,6 +3,35 @@ import IRCCLogo from "../images/ircc-logo2.png";
 import McGillLogo from "../images/mcgill-logo2.png";
 import UniMelbLogo from "../images/unimelb-logo2.png";
 import SuitsULogo from "../images/suitsu-logo.png";
+import JAVALOGO from '../images/java_logo.png';
+import JSLOGO from '../images/javascript_logo.png';
+import OCAMLLOGO from '../images/ocaml_logo.png';
+import CLOGO from '../images/c_logo.jpg';
+import PYTHONLOGO from '../images/python_logo.png';
+import KUBERNETESLOGO from '../images/kubernetes_logo.png';
+import DOCKERLOGO from '../images/docker_logo.png';
+import LINUXLOGO from '../images/linux_logo.png';
+import DARTLOGO from '../images/dart_logo.png';
+import TSLOGO from '../images/typescript_logo.png';
+import REACTLOGO from '../images/react_logo.png';
+import SPRINGLOGO from '../images/spring_logo.png';
+import MINIOLOGO from '../images/minio_logo.png';
+import REDUXLOGO from '../images/redux_logo.png';
+import CSSLOGO from '../images/css_logo.png';
+import JQUERYLOGO from '../images/jquery_logo.png';
+import FLUTTERLOGO from '../images/flutter_logo.png';
+import MYSQLLOGO from '../images/mysql_logo.png';
+import FBLOGO from '../images/fb_logo.png';
+import BASHLOGO from '../images/bash_logo.png';
+import GRAPHQLLOGO from "../images/graphql_logo.png";
+import MONGODBLOGO from "../images/mongodb_logo.png";
+import HEROKULOGO from "../images/heroku_logo.png";
+import AWSLOGO from "../images/aws_logo.png";
+import NODEJSLOGO from "../images/nodejs_logo.png";
+import SASSLOGO from "../images/sass_logo.png";
+import SUPERCOLLIDERLOGO from "../images/supercollider_logo.png";
+import CPPLOGO from "../images/cpp_logo.png";
+import HTMLLOGO from "../images/html_logo.png";
 
 //ABOUT BOX DATA
 export interface AboutBoxInfo {
@@ -336,7 +365,13 @@ export const locationData: Location[] = [
 //RESUME DATA
 export interface ResumeItem {
     experience?: Experience,
-    language?: Language
+    language?: Language,
+    tool?: Tool
+}
+
+export interface Tool {
+  data: string,
+  img: string
 }
 
 export interface Experience {
@@ -356,6 +391,147 @@ export interface ResumeBoxInfo {
     title: string,
     values: ResumeItem[]
 }
+
+const toolingValues: ResumeItem[] =[{
+        tool: {
+          data: 'React',
+          img: REACTLOGO
+        }
+      }, {
+        tool: {
+          data: "GraphQL",
+          img: GRAPHQLLOGO
+        }
+      }, {
+        tool: {
+          data: "Redux",
+          img: REDUXLOGO
+        }
+      }, {
+        tool: {
+          data: "Node.js",
+          img: NODEJSLOGO
+        }
+      }, {
+        tool: {
+          data: 'SASS',
+          img: SASSLOGO
+        }
+      }, {
+        tool: {
+          data: 'jQuery',
+          img: JQUERYLOGO
+        }
+      }, {
+        tool: {
+          data: "Spring",
+          img: SPRINGLOGO
+        }
+      }, {
+        tool: {
+          data: "MinIO",
+          img: MINIOLOGO
+        }
+      }, {
+        tool: {
+          data: "Kubernetes",
+          img: KUBERNETESLOGO
+        }
+      }, {
+        tool: {
+          data: "Docker",
+          img: DOCKERLOGO
+        }
+      }, {
+        tool: {
+          data: "AWS",
+          img: AWSLOGO
+        }
+      }, {
+        tool: {
+          data: "Heroku",
+          img: HEROKULOGO
+        }
+      }, {
+        tool: {
+          data: "Linux/Unix",
+          img: LINUXLOGO
+        }
+      }, {
+        tool: {
+          data: 'MySQL',
+          img: MYSQLLOGO
+        }
+      }, {
+      tool: {
+        data: "MongoDB",
+        img: MONGODBLOGO
+      }
+      }, {
+      tool: {
+        data: 'Firebase/Firestore',
+        img: FBLOGO
+      }
+    }, {
+      tool: {
+        data: "Flutter",
+        img: FLUTTERLOGO
+      }
+    }
+]
+
+const programingValues: ResumeItem[] =[{
+          tool: {
+            data: 'Java',
+            img: JAVALOGO
+          }
+        }, {
+          tool: {
+            data: 'JavaScript',
+            img: JSLOGO
+          }
+        }, {
+          tool: {
+            data: 'TypeScript',
+            img: TSLOGO
+          }
+        }, {
+          tool: {
+            data: 'Python',
+            img: PYTHONLOGO
+          }
+        }, {
+          tool: {
+            data: 'OCaml',
+            img: OCAMLLOGO
+          }
+        }, {
+          tool: {
+            data: 'C',
+            img: CLOGO
+          }
+        }, {
+          tool: {
+            data: "C++",
+            img: CPPLOGO
+          }
+        }, {
+          tool: {
+            data: 'Bash',
+            img: BASHLOGO
+          }
+        }, {
+        tool: {
+          data: 'Dart',
+          img: DARTLOGO
+        }
+      }, {
+        tool: {
+          data: 'SuperCollider',
+          img: SUPERCOLLIDERLOGO
+        }
+      }
+]
 
 const educationValues: ResumeItem[] = [{
         experience: {
@@ -442,8 +618,13 @@ export const resumeDetails: ResumeBoxInfo[] = [{
     }, {
         title: "Volunteer and Extracurricular",
         values: volunteerValues
-    },
-    {
+    }, {
+        title: "Programming Languages",
+        values: programingValues
+    }, {
+        title: "Tools and Frameworks",
+        values: toolingValues
+    }, {
         title: "Languages",
         values: languageValues
     }
