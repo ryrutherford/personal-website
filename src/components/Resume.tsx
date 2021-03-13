@@ -16,7 +16,7 @@ const Resume = () => {
     
     return(
         <section>
-            <SVGBox steps={["Resume", 1500]} svgStyle="endless-clouds" bgColorClass="bgimage-color-tertiary-gradient"/>
+            <SVGBox steps={["Resume", 1500]} svgStyle="endless-clouds" bgColorClass="bgcolor-primary" colorClass="color-white"/>
             <div ref={resumeRef} className="resume">
                 {resumeDetails.map((resumeDetail, index) => {
                     return (
