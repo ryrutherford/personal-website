@@ -79,7 +79,7 @@ export const aboutBoxInfo: AboutBoxInfo[] = [{
         side: "left",
         svgId: "icon-travel",
         titleText: "I like to travel", 
-        info: "Thanks in large part to my Dad and his work I've been able to visit many countries around the world and experience a variety of different cultures. Check out the map below to see the places I've visted."
+        info: "Thanks in large part to my dad and his work I've been able to visit many countries around the world and experience a variety of different cultures. Check out the map below to see the places I've visted."
     }
 ]
 
