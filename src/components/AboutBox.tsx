@@ -1,28 +1,35 @@
 import {Slide} from "react-awesome-reveal";
 import svgs from "../images/sprite.svg"
+import {AboutBoxInfo} from "../constants/constants";
 
 interface AboutBoxProps {
-    triggerOnce: boolean,
-    gridClass?: string,
-    titleText: string,
-    svgId: string,
-    side: string,
-    bgImageClass: string,
-    fontClass?: string,
-    mwClass?: string
+    details: AboutBoxInfo
 }
 
-const AboutBox = ({triggerOnce, gridClass, titleText, svgId, side, bgImageClass, fontClass, mwClass}: AboutBoxProps) => {
+const AboutBox = ({details}: AboutBoxProps) => {
+
     return(
-        <Slide triggerOnce={triggerOnce} className={gridClass ? gridClass : ""}>
-            <div className={side === "left" ? `about-box ${bgImageClass}` : `about-box ${bgImageClass} about-box-right`}>
-                <div className={side === "left" ? `about-text ml-2 ${mwClass ? mwClass : ""}` : `about-text mr-2 ${mwClass ? mwClass : ""}`}>
-                    <Slide triggerOnce={triggerOnce}>
-                        <span className={`about-title color-white ${fontClass ? fontClass : ""}`}>{titleText}</span>
+        <Slide triggerOnce={details.triggerOnce} className={details.gridClass ? details.gridClass : ""}>
+            <div className={`about-box ${details.gridClass ? details.gridClass : ""}`}>
+                <div className={`about-box-side about-box-side--front ${details.bgImageClass} ${details.side === "left" ? "" : "about-box-right"}`}>
+                    <div className={`text-align-center ${details.mwClass ? details.mwClass : ""} ${details.side === "left" ? "ml-2" : "mr-2"}`}>
+                        <Slide triggerOnce={details.triggerOnce}>
+                            <span className={`about-title color-white ${details.fontClass ? details.fontClass : ""}`}>{details.titleText}</span>
+                            <svg className="about-icon">
+                                <use xlinkHref={`${svgs}#${details.svgId}`}/>
+                            </svg>
+                        </Slide>
+                    </div>
+                </div>
+                <div className={`about-box-side about-box-side--back bgcolor-primary`}>
+                    <div className="about-info">
+                        <div className="about-info-text mw-50 text-align-center">
+                            <span className="color-white">{details.info}</span>
+                        </div>
                         <svg className="about-icon">
-                            <use xlinkHref={`${svgs}#${svgId}`}/>
+                            <use xlinkHref={`${svgs}#${details.svgId}`}/>
                         </svg>
-                    </Slide>
+                    </div>
                 </div>
             </div>
         </Slide>

@@ -1,7 +1,21 @@
 import { MutableRefObject, useEffect, useRef } from "react";
+import {Slide} from "react-awesome-reveal";
 import SVGBox from "./SVGBox";
 import AboutBox from "./AboutBox";
+import Places from "./Places";
+import svgs from "../images/sprite.svg"
+import {aboutBoxInfo} from "../constants/constants";
 
+const getAge = () => {
+    const today = new Date();
+    const birthDate = new Date('10 Jun 1999 00:00:00 EST');
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
 
 const About = () => {
 
@@ -17,16 +31,20 @@ const About = () => {
         <section>
             <SVGBox steps={["About", 1500]} svgStyle="hexagon" bgColorClass="bgcolor-primary" colorClass="color-white"/>
             <div ref={aboutRef} className="about">
-                <AboutBox triggerOnce={true} gridClass="grid-full" bgImageClass="bgimage-moto"
-                    side="left" svgId="icon-moto" titleText="I like to ride"/>
-                <AboutBox triggerOnce={true} gridClass="grid-full" bgImageClass="bgimage-music"
-                    side="right" svgId="icon-headphones" titleText="I like to make music"/>
-                <AboutBox triggerOnce={true} gridClass="grid-full" bgImageClass="bgimage-powerlift" mwClass="mw-50"
-                    side="left" svgId="icon-powerlifting" titleText="I like to powerlift"/>
-                <AboutBox triggerOnce={true} bgImageClass="bgimage-ball" mwClass="mw-66" fontClass="xxlarge-font-size"
-                    side="right" svgId="icon-ball" titleText="I like to play basketball"/>
-                <AboutBox triggerOnce={true} bgImageClass="bgimage-soccer" mwClass="mw-66" fontClass="xxlarge-font-size"
-                    side="left" svgId="icon-soccer" titleText="And soccer too"/>
+                <Slide triggerOnce={true} className="grid-full">
+                    <div className="about-box bgcolor-grey-dark-1">
+                        <div className="about-info-intro mw-50 text-align-center">
+                            <span className="color-white">Hi, I'm Ry, a {getAge()} year old software developer currently living in Ottawa and working out of Montreal. Scroll down to learn more about my interests!</span>
+                            <svg className="about-icon">
+                                <use xlinkHref={`${svgs}#icon-me`}/>
+                            </svg>
+                        </div>
+                    </div>
+                </Slide>
+                {aboutBoxInfo.map((info, index) => <AboutBox details={info} key={index}/>)}
+                <Slide triggerOnce={true} className="grid-full">
+                    <Places/>
+                </Slide>
             </div>
         </section>
     );

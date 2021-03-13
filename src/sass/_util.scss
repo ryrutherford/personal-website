@@ -8,7 +8,7 @@
 }
 
 .grid-full {
-  perspective: none;
+  perspective: none !important;
   grid-column: 1 / -1;
 }
 
@@ -46,8 +46,24 @@
   background-repeat: no-repeat;
 }
 
+.bgimage-skiing {
+  background-image: url("./images/ski.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgimage-travel {
+  background-image: url("./images/travel.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .bgcolor-primary {
   background-color: $color-primary;
+}
+
+.bgcolor-grey-dark-1 {
+  background-color: $color-grey-dark-1;
 }
 
 .bgcolor-secondary-dark {
@@ -119,10 +135,17 @@
   margin-right: 2rem;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
+.mw-33 {
+  max-width: 33%;
+}
 .mw-50 {
-  max-width: 50% !important;
+  max-width: 50%;
 }
 
 .mw-66 {
-  max-width: 66% !important;
+  max-width: 66%;
 }
