@@ -17,6 +17,7 @@ import REACTLOGO from '../images/react_logo.png';
 import SPRINGLOGO from '../images/spring_logo.png';
 import MINIOLOGO from '../images/minio_logo.png';
 import REDUXLOGO from '../images/redux_logo.png';
+import FLASKLOGO from '../images/flask_logo.png';
 import CSSLOGO from '../images/css_logo.png';
 import JQUERYLOGO from '../images/jquery_logo.png';
 import FLUTTERLOGO from '../images/flutter_logo.png';
@@ -426,6 +427,11 @@ const toolingValues: ResumeItem[] =[{
         tool: {
           data: "Spring",
           img: SPRINGLOGO
+        }
+      }, {
+        tool: {
+          data: "Flask",
+          img: FLASKLOGO
         }
       }, {
         tool: {
