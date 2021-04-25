@@ -25,6 +25,7 @@ import MYSQLLOGO from '../images/mysql_logo.png';
 import FBLOGO from '../images/fb_logo.png';
 import BASHLOGO from '../images/bash_logo.png';
 import GRAPHQLLOGO from "../images/graphql_logo.png";
+import KAFKALOGO from "../images/kafka_logo.png";
 import MONGODBLOGO from "../images/mongodb_logo.png";
 import HEROKULOGO from "../images/heroku_logo.png";
 import AWSLOGO from "../images/aws_logo.png";
@@ -613,6 +614,12 @@ const toolingValues: ResumeItem[] =[{
           img: MINIOLOGO
         }
       }, {
+      }, {
+        tool: {
+          data: "Apache Kafka",
+          img: KAFKALOGO
+        }
+      }, {
         tool: {
           data: "Kubernetes",
           img: KUBERNETESLOGO
@@ -734,13 +741,23 @@ const educationValues: ResumeItem[] = [{
 ]
 
 const workExpValues: ResumeItem[] = [{
+          experience: {
+              role: "Software Developer",
+              company: "Nuance Communications",
+              date: "May 2021 - Present",
+              logo: NuanceLogo,
+              description: ["In progress..."]
+          }
+        },{
         experience: {
             role: "Software Developer Intern",
             company: "Nuance Communications",
-            date: "January 2021 - Present",
+            date: "January 2021 - April 2021",
             logo: NuanceLogo,
-            description: ["Developed numerous features for an internal application used by Developers, QA Analysts and Speech Scientists to manage, monitor, and update their Interactive Voice Response and Virtual Assistant applications",
-            "Worked on numerous speech enabled applications for customers like UPS and Wells Fargo"]
+            description: ["Received an \"Innovation Award\" for developing a Spring based automated backup and version history tool used for projects built in Mix (Nuance's conversational AI design platform)",
+            "Co-developed a Spring based service that converts conversational AI projects built in Nuance's legacy design framework to Nuance Mix projects, thereby saving customers like UPS the costs of manually upgrading their conversational AI tools",
+            "Developed numerous features for an internal application used by Developers, QA Analysts and Speech Scientists to manage, monitor, and update their conversational AI applications",
+            "Built a dashboard using Flask, React, and the Jira API that provides insights on issues surrounding Nuance's projects for Wells Fargo"]
         }
     }, {
         experience: {
