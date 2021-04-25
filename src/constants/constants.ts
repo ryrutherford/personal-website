@@ -17,6 +17,7 @@ import REACTLOGO from '../images/react_logo.png';
 import SPRINGLOGO from '../images/spring_logo.png';
 import MINIOLOGO from '../images/minio_logo.png';
 import REDUXLOGO from '../images/redux_logo.png';
+import FLASKLOGO from '../images/flask_logo.png';
 import CSSLOGO from '../images/css_logo.png';
 import JQUERYLOGO from '../images/jquery_logo.png';
 import FLUTTERLOGO from '../images/flutter_logo.png';
@@ -24,6 +25,7 @@ import MYSQLLOGO from '../images/mysql_logo.png';
 import FBLOGO from '../images/fb_logo.png';
 import BASHLOGO from '../images/bash_logo.png';
 import GRAPHQLLOGO from "../images/graphql_logo.png";
+import KAFKALOGO from "../images/kafka_logo.png";
 import MONGODBLOGO from "../images/mongodb_logo.png";
 import HEROKULOGO from "../images/heroku_logo.png";
 import AWSLOGO from "../images/aws_logo.png";
@@ -32,6 +34,180 @@ import SASSLOGO from "../images/sass_logo.png";
 import SUPERCOLLIDERLOGO from "../images/supercollider_logo.png";
 import CPPLOGO from "../images/cpp_logo.png";
 import HTMLLOGO from "../images/html_logo.png";
+
+//PROJECT CARD DATA
+export interface ProjectCardInfo {
+    title: string,
+    video?: string,
+    body?: string,
+    titleImg: string,
+    languages: Tool[],
+    github: string,
+    link?: string
+}
+
+export const projectCardInfo: ProjectCardInfo[] = [
+  {
+    title: 'Suits U',
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1610912703/adryan/SuitsUMontreal/Screenshot_106_uvacnw.png',
+    github: 'https://github.com/ryrutherford/suits-u-frontend',
+    link: 'https://suitsumontreal.ca',
+    languages: [
+      {
+        data: 'React',
+        img: REACTLOGO
+      },
+      {
+        data: 'Node.js',
+        img: NODEJSLOGO
+      },
+      {
+        data: 'GraphQL',
+        img: GRAPHQLLOGO
+      },
+      {
+        data: 'MongoDB',
+        img: MONGODBLOGO
+      },
+      {
+        data: 'SASS',
+        img: SASSLOGO
+      },
+      {
+        data: 'Python',
+        img: PYTHONLOGO
+      },
+      {
+        data: 'Heroku',
+        img: HEROKULOGO
+      },
+      {
+        data: 'Firebase',
+        img: FBLOGO
+      },
+    ],
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1610912502/adryan/SuitsUMontreal/Suits_U_Montreal_-_Google_Chrome_2020-11-21_22-15-32_1_n4civc.mp4',
+  },
+  {
+    title: 'Algorithmic Composition',
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1610912872/adryan/AlgorithmicComposition/wolframtones_p39b1g.gif',
+    body: 'Visit https://algorithmic-composition.web.app/ to learn more about the project.',
+    github: 'https://github.com/ryrutherford/algorithmic-composition-sc',
+    link: 'https://algorithmic-composition.web.app/',
+    languages: [
+      {
+        data: 'Supercollider',
+        img: SUPERCOLLIDERLOGO
+      },
+      {
+        data: 'SASS',
+        img: SASSLOGO
+      },
+      {
+        data: "HTML5",
+        img: HTMLLOGO
+      },
+      {
+        data: 'Firebase',
+        img: FBLOGO
+      },
+    ],
+  },
+  {
+    title: 'Play That Song',
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693179/adryan/PlayThatSong/song_request_ngwfzj.jpg',
+    github: 'https://github.com/ryrutherford/play-that-song',
+    link: 'https://play-that-song-fac18.firebaseapp.com/about',
+    languages: [
+      {
+        data: 'React',
+        img: REACTLOGO
+      },
+      {
+        data: 'Redux',
+        img: REDUXLOGO
+      },
+      {
+        data: 'Firebase/Firestore',
+        img: FBLOGO
+      },
+    ],
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693197/adryan/PlayThatSong/PlayThatSong_og1fdy.mp4',
+  },
+  {
+    title: 'Spyfall',
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693142/adryan/Spyfall/spyfall_mxysj1.png',
+    github: 'https://github.com/ryrutherford/spyfall',
+    languages: [
+      {
+        data: 'Dart',
+        img: DARTLOGO
+      },
+      {
+        data: 'Flutter',
+        img: FLUTTERLOGO
+      },
+      {
+        data: 'Firebase/Firestore',
+        img: FBLOGO
+      },
+    ],
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693157/adryan/Spyfall/Spyfall_n0ekug.mp4',
+  },
+  {
+    title: 'Tic Tac Toe',
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693280/adryan/TicTacToe/tictactoe_cfyvbk.jpg',
+    github: 'https://github.com/ryrutherford/TicTacToeWebApp',
+    languages: [
+      {
+        data: 'Java',
+        img: JAVALOGO
+      },
+      {
+        data: 'JavaScript',
+        img: JSLOGO
+      },
+      {
+        data: 'CSS',
+        img: CSSLOGO
+      },
+    ],
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693287/adryan/TicTacToe/TicTacToe_uogbsj.mp4',
+  },
+  //TODO: move shadow defend to github
+  {
+    title: 'Shadow Defend',
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693217/adryan/ShadowDefend/shadow_defend_fqbbjf.png',
+    github: 'https://github.com/ryrutherford/ShadowDefend',
+    languages: [
+      {
+        data: 'Java',
+        img: JAVALOGO
+      },
+    ],
+    video: 'https://res.cloudinary.com/dpncams2q/video/upload/v1591693234/adryan/ShadowDefend/ShadowDefend_w1rvqx.mp4',
+  },
+  {
+    title: 'Personal Website',
+    titleImg: 'https://res.cloudinary.com/dpncams2q/image/upload/v1591693250/adryan/Adryan/adryan_bxsjuw.jpg',
+    body: 'You\'re here now so I don\'t think you need a video but I\'ll quickly explain some of the tools I used to build this website. The website was built using JavaScript and the React library and deployed to Firebase. I used MaterialUI as the UI framework and a lot of the design comes from their base components. I used a few API\'s to make it easier to maintain the website and update it without having to redeploy. The photos on the Home page are fetched from the Imgur API, the Google Maps API was used to show the places I\'ve visited in the About section, and the YouTube API was used to display some of my recents beats/tracks in the Music section.',
+    github: 'https://github.com/ryrutherford/adryan',
+    languages: [
+      {
+        data: 'TypeScript',
+        img: TSLOGO
+      },
+      {
+        data: 'React',
+        img: REACTLOGO
+      },
+      {
+        data: 'Firebase/Firestore',
+        img: FBLOGO
+      },
+    ],
+  },
+];
 
 //ABOUT BOX DATA
 export interface AboutBoxInfo {
@@ -414,7 +590,7 @@ const toolingValues: ResumeItem[] =[{
         }
       }, {
         tool: {
-          data: 'SASS',
+          data: 'Sass',
           img: SASSLOGO
         }
       }, {
@@ -429,8 +605,19 @@ const toolingValues: ResumeItem[] =[{
         }
       }, {
         tool: {
+          data: "Flask",
+          img: FLASKLOGO
+        }
+      }, {
+        tool: {
           data: "MinIO",
           img: MINIOLOGO
+        }
+      }, {
+      }, {
+        tool: {
+          data: "Apache Kafka",
+          img: KAFKALOGO
         }
       }, {
         tool: {
@@ -554,13 +741,23 @@ const educationValues: ResumeItem[] = [{
 ]
 
 const workExpValues: ResumeItem[] = [{
+          experience: {
+              role: "Software Developer",
+              company: "Nuance Communications",
+              date: "May 2021 - Present",
+              logo: NuanceLogo,
+              description: ["In progress..."]
+          }
+        },{
         experience: {
             role: "Software Developer Intern",
             company: "Nuance Communications",
-            date: "January 2021 - Present",
+            date: "January 2021 - April 2021",
             logo: NuanceLogo,
-            description: ["Developed numerous features for an internal application used by Developers, QA Analysts and Speech Scientists to manage, monitor, and update their Interactive Voice Response and Virtual Assistant applications",
-            "Worked on numerous speech enabled applications for customers like UPS and Wells Fargo"]
+            description: ["Received an \"Innovation Award\" for developing a Spring based automated backup and version history tool used for projects built in Mix (Nuance's conversational AI design platform)",
+            "Co-developed a Spring based service that converts conversational AI projects built in Nuance's legacy design framework to Nuance Mix projects, thereby saving customers like UPS the costs of manually upgrading their conversational AI tools",
+            "Developed numerous features for an internal application used by Developers, QA Analysts and Speech Scientists to manage, monitor, and update their conversational AI applications",
+            "Built a dashboard using Flask, React, and the Jira API that provides insights on issues surrounding Nuance's projects for Wells Fargo"]
         }
     }, {
         experience: {

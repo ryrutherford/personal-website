@@ -1,0 +1,88 @@
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40rem;
+    box-shadow: 0 .4rem .8rem 0 rgba($color-grey-dark-1, .25);
+    border-radius: .5rem;
+
+    &-img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+
+    &-title {
+        margin-top: 1rem;
+        font-size: $xlarge-font-size;
+    }
+
+    &-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &-link-icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        transition: all .5s;
+    }
+
+    &-languages{
+        margin: auto .5rem 1rem .5rem;
+        display: flex;
+        height: 8rem;
+        max-width: 100%;
+        max-width: 40rem;
+        overflow-x: scroll;
+        align-items: center;
+
+        &::-webkit-scrollbar {
+            height: .33rem;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $color-grey-light-2;
+            border-radius: .5rem;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 .5rem $color-grey-light-2;
+            border-radius: .5rem;
+        }
+    }
+
+
+    &-lang{
+        min-width: 6rem;
+        height: 5rem;
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: .5rem;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        border-radius: .5rem;
+        box-shadow: 0 .4rem .8rem 0 rgba($color-grey-dark-1, .25);
+
+        &-img {
+            width: auto;
+            height: auto;
+            max-height: 2.5rem;
+            max-width: 2.5rem;
+            object-fit: contain;
+        }
+    }
+}
